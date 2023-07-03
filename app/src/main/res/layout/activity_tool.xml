@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ToolActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+    <ImageView
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/img_profilt_avt"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/gamer" />
+
+    <TextView
+        android:id="@+id/tv_profile_status"
+        style="@style/LabelStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/img_profilt_avt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        android:text="Profile" />
+
+    <TextView
+        android:id="@+id/tv_profile_username"
+        style="@style/LabelStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_profile_status"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="username"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:id="@+id/layout_name_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_profile_username"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_profile_first_name"
+            style="@style/LabelStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FirstName " />
+
+        <TextView
+            android:id="@+id/tv_profile_lastName"
+            style="@style/LabelStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="LastName" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_profile_logout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/layout_name_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/baseline_power" />
+
+    <TextView
+        style="@style/LabelStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_profile_logout"
+        android:layout_centerHorizontal="true"
+        android:text="Đăng xuất" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/GhostWhite"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/dieuhuong_bottom" />
+</RelativeLayout>
